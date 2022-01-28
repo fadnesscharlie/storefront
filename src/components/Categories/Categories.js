@@ -10,40 +10,40 @@
 // import React from "react";
 import { connect } from 'react-redux';
 
-import { showClothes, showElectronics, showFood } from '../Products/Products.js';
-import ProductCard from '../Products/ProductCard';
+import {
+	showClothes,
+	showElectronics,
+	showFood,
+} from '../Products/Products.js';
 
+import ProductCard from '../Products/ProductCard';
 
 const displayProducts = (props) => {
 	console.log('props:', props);
 	return (
+		<div>
+			<section>
+				<ul>
+					{ props.products.Products.categories.length ?
+					props.products.Products.categories.map((category) => (
+						<li
+							onClick={() => props.showClothes('CLOTHES')}
+							key={category.name}
+						>
+							<ProductCard item={category} />
+						</li>
+					))
+				: ''}
+				</ul>
+			</section>
+		</div>
+	);
+};
 
-		// TAKEN FROM DEMO
+const mapStateToProps = (state) => ({
+	products: state,
+});
 
-		<section>
-      <ul>
-        {props.products.Products.map((category) => (
+const mapDispatchToProps = { showClothes, showElectronics, showFood };
 
-					// on click of product, filter through the category, then run function that goes with the category
-					< ProductCard props={category} />
-
-          // <li onClick={() => props.showClothes('CLOTHES')} 
-					// // key={category}
-					// >
-          //   {category}
-          // </li>
-        ))}
-      </ul>
-      {/* <button onClick={props.reset}>RESET</button> */}
-    </section>
-
-	)
-}
-
-const mapStateToProps = state => ({
-	products: state
-})
-
-const MapDispatchToProps = { showClothes, showElectronics, showFood }
-
-export default connect(mapStateToProps, MapDispatchToProps)(displayProducts)
+export default connect(mapStateToProps, mapDispatchToProps)(displayProducts);

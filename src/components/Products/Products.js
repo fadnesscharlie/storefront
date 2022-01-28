@@ -3,18 +3,19 @@
 // 			HINT: Multiple reducers can respond to the same action
 // Creat a reducer that will filter the products based on active category
 
-import ProductCard from './ProductCard';
+// import ProductCard from './ProductCard';
 
 // Active Category
 // State should hold this
 // Other components may need to reference this
 // 		Create this as global state
 
-let initialState = [
+let initialState = {
 	// State should hold a list of all products
 	// products: {
 		// Each Product should have:
 		// 			Category, name, description, price, and inventory count
+    categories: [
 
 			{
 				Category: 'food',
@@ -23,7 +24,6 @@ let initialState = [
 				price: 10,
 				inventoryCount: 12,
 			},
-
 			{
 				Category: 'clothes',
 				name: 'Shirt',
@@ -31,7 +31,6 @@ let initialState = [
 				price: 25,
 				inventoryCount: 23,
 			},
-
 			{
 				Category: 'electronics',
 				name: 'Phone',
@@ -39,8 +38,12 @@ let initialState = [
 				price: 500,
 				inventoryCount: 2,
 			},
-		]
-	// },
+		],
+     
+    activeObj: '' 
+      
+		// ]
+	}
   
 
 export default (state = initialState, action) => {
@@ -49,10 +52,17 @@ export default (state = initialState, action) => {
 	switch (type) {
 		default:
 			return state;
+
 		case 'CLOTHES':
-
-      return state.clothes 
-
+			let category = state.categories.find(el => (
+				el.Category === payload.toLowerCase()
+			))
+			console.log('category:', category);
+      return {
+				...state,
+				categories: [ category ],
+				activeObj: category
+			}
 
 
 
@@ -107,6 +117,7 @@ export default (state = initialState, action) => {
 };
 
 export const showClothes = (category) => {
+	console.log('Here')
 	return {
 		type: 'CLOTHES',
 		payload: category,

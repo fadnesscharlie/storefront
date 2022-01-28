@@ -1,0 +1,12 @@
+.navItem {
+  border: solid red 2px;
+  background-color: darkcyan;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 200px;
+}
+
+.firstNav {
+  margin-left: 500px;
+
+}
