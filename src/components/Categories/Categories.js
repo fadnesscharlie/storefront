@@ -9,11 +9,10 @@
 
 // import React from "react";
 import { connect } from 'react-redux';
+import '../Products/productCard.css';
 
 import {
-	showClothes,
-	showElectronics,
-	showFood,
+	showCategory,
 } from '../Products/Products.js';
 
 import ProductCard from '../Products/ProductCard';
@@ -24,16 +23,17 @@ const displayProducts = (props) => {
 		<div>
 			<section>
 				<ul>
-					{ props.products.Products.categories.length ?
-					props.products.Products.categories.map((category) => (
-						<li
-							onClick={() => props.showClothes('CLOTHES')}
-							key={category.name}
-						>
-							<ProductCard item={category} />
-						</li>
-					))
-				: ''}
+					{props.products.Products.categories.length
+						? props.products.Products.categories.map((category) => (
+								<li
+									className='productCard'
+									onClick={() => props.showCategory(category.Category)}
+									key={category.name}
+								>
+									<ProductCard item={category} />
+								</li>
+						  ))
+						: ''}
 				</ul>
 			</section>
 		</div>
@@ -44,6 +44,6 @@ const mapStateToProps = (state) => ({
 	products: state,
 });
 
-const mapDispatchToProps = { showClothes, showElectronics, showFood };
+const mapDispatchToProps = { showCategory };
 
 export default connect(mapStateToProps, mapDispatchToProps)(displayProducts);

@@ -1,9 +1,9 @@
 import Card from 'react-bootstrap/Card';
 import { ListGroup } from 'react-bootstrap';
 import { ListGroupItem } from 'react-bootstrap';
+
 const displayCard = (item) => (
 	<Card style={{ width: '18rem' }}>
-    {/* {console.log('item:', item)} */}
 		<Card.Img variant='top' src='#' />
 		<Card.Body>
 			<Card.Title>{item.item.name}</Card.Title>
@@ -16,4 +16,4 @@ const displayCard = (item) => (
 	</Card>
 );
 
-export default displayCard
+export default displayCard;

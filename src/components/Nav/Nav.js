@@ -3,23 +3,25 @@ import './Nav.css'
 import { connect } from 'react-redux';
 
 import {
-	showClothes,
-	showElectronics,
-	showFood,
+	showCategory,
+  resetCategory
 } from '../Products/Products.js';
 
 const Nav = (props) => (
   <div>
   {console.log('props:', props)}
-   <span className='navItem firstNav' onClick={() => props.showClothes('clothes')}>
+   <span className='navItem firstNav' onClick={() => props.showCategory('clothes')}>
      Food
    </span>
-   <span className='navItem' onClick={() => props.showClothes('electronics')}>
+   <span className='navItem' onClick={() => props.showCategory('electronics')}>
      Electronics
    </span>
-   <span className='navItem' onClick={() => props.showClothes('food')}>
+   <span className='navItem' onClick={() => props.showCategory('food')}>
      Clothes
    </span>
+   <span className='navItem' 
+   onClick={() => props.resetCategory()}
+   >Show All Itemss</span>
  </div>
 )
 
@@ -27,7 +29,7 @@ const mapStateToProps = (state) => ({
 	products: state,
 });
 
-const mapDispatchToProps = { showClothes, showElectronics, showFood };
+const mapDispatchToProps = { showCategory, resetCategory };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Nav);
 

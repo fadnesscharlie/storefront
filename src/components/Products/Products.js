@@ -53,8 +53,8 @@ export default (state = initialState, action) => {
 		default:
 			return state;
 
-		case 'CLOTHES':
-			let category = state.categories.find(el => (
+		case 'PRODUCTS/PRODUCTCATEGORY':
+			let category = initialState.categories.find(el => (
 				el.Category === payload.toLowerCase()
 			))
 			console.log('category:', category);
@@ -64,7 +64,10 @@ export default (state = initialState, action) => {
 				activeObj: category
 			}
 
+		case 'PRODUCTS/RESET':
+			return initialState
 
+			
 
 
 
@@ -116,24 +119,30 @@ export default (state = initialState, action) => {
 	}
 };
 
-export const showClothes = (category) => {
+export const showCategory = (category) => {
 	console.log('Here')
 	return {
-		type: 'CLOTHES',
+		type: 'PRODUCTS/PRODUCTCATEGORY',
 		payload: category,
 	};
 };
 
-export const showFood = (food) => {
+export const resetCategory = () => {
 	return {
-		type: 'FOOD',
-		payload: food,
-	};
-};
+		type: 'PRODUCTS/RESET',
+	}
+}
 
-export const showElectronics = (electronics) => {
-	return {
-		type: 'ELECTRONICS',
-		payload: electronics,
-	};
-};
+// export const showFood = (food) => {
+// 	return {
+// 		type: 'FOOD',
+// 		payload: food,
+// 	};
+// };
+
+// export const showElectronics = (electronics) => {
+// 	return {
+// 		type: 'ELECTRONICS',
+// 		payload: electronics,
+// 	};
+// };
