@@ -1,14 +1,11 @@
-// import Products from './Products/Products.js';
 import Categories from './Categories/Categories.js';
 import ViewCart from './Cart/ViewCart.js';
 
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-import './Main.css';
-
 export default function main() {
 	return (
-		<body>
+		<section className='mainCss'>
 
 		{/* TODO: Add in BrowserRouter */}
 
@@ -22,6 +19,6 @@ export default function main() {
 			</Router> */}
 					<Categories />
 					<ViewCart />
-		</body>
+		</section>
 	);
 }

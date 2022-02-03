@@ -3,7 +3,7 @@ h1:before {
 }
 
 footer {
-  border: solid 4px red; 
+  /* border: solid 4px red;  */
   padding: 10px;
   background-color: dimgray;
   margin-top: 30px;

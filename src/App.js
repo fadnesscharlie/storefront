@@ -8,11 +8,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // bring in store and provider from redux
 function App() {
 	return (
-		<>
+		<div className='wholeApp'>
 			<Header />
 			<Main />
 			<Footer />
-		</>
+		</div>
 	);
 }
 

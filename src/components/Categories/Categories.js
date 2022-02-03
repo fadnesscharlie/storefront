@@ -9,7 +9,6 @@ import ProductCard from '../Products/ProductCard';
 import { Button } from 'react-bootstrap';
 
 const displayProducts = (props) => {
-	// console.log('props:', props);
 	return (
 		<div>
 			<section>
