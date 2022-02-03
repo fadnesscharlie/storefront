@@ -1,0 +1,10 @@
+h1:before {
+  content: ' \0040';
+}
+
+footer {
+  /* border: solid 4px red;  */
+  padding: 10px;
+  background-color: dimgray;
+  margin-top: 30px;
+}

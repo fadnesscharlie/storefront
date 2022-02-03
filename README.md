@@ -4,12 +4,21 @@ In our application we want to create an application that can host items to displ
 
 ## Usage
 
-## UML
+Usage of our application includes being able to add an item from our store into a cart. From there you can view your item as well.
 
-![UML]()
+<!-- ## UML
+
+![UML]() -->
 
 ## Testing
 
+To be added in a later date.
+
 ## Contributors
 
+- Mark Thanadabouth
+
 ## Resources
+
+- [Browser Router](https://reactrouter.com/docs/en/v6/getting-started/overview#navigation)
+- [React BootStrap](https://react-bootstrap.github.io/components/)
