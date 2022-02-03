@@ -1,0 +1,19 @@
+header {
+  border: solid 4px red; 
+  padding: 20px;
+  background-color: darkgray;
+  margin-bottom: 30px;
+}
+
+.headerTitle {
+  text-align: left;
+  border: solid 4px green; 
+
+}
+
+.Nav {
+  text-align: left;
+  margin-top: 20px;
+  border: solid 4px orange; 
+
+}

@@ -1,4 +1,10 @@
 .productCard {
   border: solid 4px blue;
   width:fit-content;
+  margin: 10px;
+  list-style-type: none;
+}
+
+.addButton {
+  width: 9rem;
 }

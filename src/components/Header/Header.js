@@ -1,9 +1,13 @@
-export default function Header(props) {
+import './Header.css';
+import Nav from '../Nav/Nav.js';
 
-  return (
-    <header>
-      <h1>Welcome to Charlie's Store Front App!</h1>
-  
-			</header>
-  )
+export default function Header() {
+	return (
+		<header>
+			<h1 className='headerTitle'>Welcome to Charlie's Store Front App!</h1>
+			<article className='Nav'>
+				<Nav />
+			</article>
+		</header>
+	);
 }

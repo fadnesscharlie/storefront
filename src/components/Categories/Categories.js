@@ -1,36 +1,36 @@
-// Display a list of all "categories" in Cards
-// Dispatches an action when one is clicked to "activate" it
-// 		Create a method to respond when a category is clicked
-// 		Use Redux Reducer Action Method
-//    Update active category when clicked
-
-// State should hold categories
-// Categories should have: name, display name, and description
-
-// import React from "react";
 import { connect } from 'react-redux';
 import '../Products/productCard.css';
 
-import {
-	showCategory,
-} from '../Products/Products.js';
+// Reducers
+import { showCategory } from '../Products/Products.js';
+import { cartItem, removeItem } from '../Cart/Cart.js';
 
 import ProductCard from '../Products/ProductCard';
+import { Button } from 'react-bootstrap';
 
 const displayProducts = (props) => {
-	console.log('props:', props);
+	// console.log('props:', props);
 	return (
 		<div>
 			<section>
-				<ul>
+				<ul className='d-flex flex-row bd-highlight mb-3'>
 					{props.products.Products.categories.length
 						? props.products.Products.categories.map((category) => (
 								<li
-									className='productCard'
-									onClick={() => props.showCategory(category.Category)}
+									className='productCard p-2 bd-highlight'
 									key={category.name}
 								>
 									<ProductCard item={category} />
+									<span>
+										<Button
+											onClick={() => props.cartItem(category)}
+											className='addButton'
+										>
+											Add to Cart
+										</Button>
+
+										<Button className='addButton'>View Details</Button>
+									</span>
 								</li>
 						  ))
 						: ''}
@@ -44,6 +44,6 @@ const mapStateToProps = (state) => ({
 	products: state,
 });
 
-const mapDispatchToProps = { showCategory };
+const mapDispatchToProps = { showCategory, cartItem, removeItem };
 
 export default connect(mapStateToProps, mapDispatchToProps)(displayProducts);

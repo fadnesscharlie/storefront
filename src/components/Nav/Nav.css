@@ -6,7 +6,19 @@
   margin-bottom: 200px;
 }
 
-.firstNav {
+/* .firstNav {
   margin-left: 500px;
+
+} */
+
+.startingNav {
+  font-size: large;
+}
+
+.cart {
+  /* text-align: right; */
+  border: solid pink 2px;
+  width: 100px;
+  float: right;
 
 }
