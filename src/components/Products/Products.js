@@ -1,5 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
+import axios from 'axios';
+
 let initialState = {
 	categories: [
 		{
@@ -54,8 +56,35 @@ export default (state = initialState, action) => {
 		case 'PRODUCTS/RESET':
 			return initialState;
 
+		case 'PRODUCTS/ADD_PRODUCTS':
+			// console.log('payload:', payload.results[0].category);
+
+			// let categoryAPI = initialState.categories.find(
+			// 	(el) => el.Category === payload.results.category
+			// );
+			// console.log('Product.js - category:', categoryAPI);
+			return {
+				...state,
+				categories: payload.results,
+				activeObj: '',
+			};
+
 	}
 };
+
+export const asyncAddProduct = () => async (dispatch) => {
+	const response = await axios.get('https://api-js401.herokuapp.com/api/v1/products')
+	const data = response.data
+	console.log('data in AsyncAddProduct:', data);
+	dispatch(addProduct(data))
+}
+
+export const addProduct = (payload) => {
+	return {
+		type: 'PRODUCTS/ADD_PRODUCTS',
+		payload: payload
+	}
+}
 
 export const showCategory = (category) => {
 	return {
@@ -69,5 +98,3 @@ export const resetCategory = () => {
 		type: 'PRODUCTS/RESET',
 	};
 };
-
-

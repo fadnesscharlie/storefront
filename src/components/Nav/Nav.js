@@ -29,6 +29,7 @@ const Nav = (props) => (
 			<div className='cart'>
 				Cart:{' '}
 				<span>({props.products.Cart.length ? props.products.Cart.length : '0'})</span>
+				
 			</div>
 		</div>
 );
