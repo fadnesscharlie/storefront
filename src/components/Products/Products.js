@@ -46,7 +46,6 @@ export default (state = initialState, action) => {
 			let category = initialState.categories.find(
 				(el) => el.Category === payload.toLowerCase()
 			);
-			// console.log('Product.js - category:', category);
 			return {
 				...state,
 				categories: [category],
@@ -75,7 +74,6 @@ export default (state = initialState, action) => {
 export const asyncAddProduct = () => async (dispatch) => {
 	const response = await axios.get('https://api-js401.herokuapp.com/api/v1/products')
 	const data = response.data
-	console.log('data in AsyncAddProduct:', data);
 	dispatch(addProduct(data))
 }
 
