@@ -1,4 +1,4 @@
-let initialState = {};
+let initialState = [];
 // Reducers
 export default (state = initialState, action) => {
 	let { type, payload } = action;
@@ -7,11 +7,12 @@ export default (state = initialState, action) => {
 			return state;
 
 		case 'CART/ITEM':
-			console.log('payload in Cart:', payload);
-			return [payload];
+			let addToCart = state.filter((product) => product.name !== payload.name);
+			return [...addToCart, payload];
 
 		case 'CART/REMOVE_ITEM':
-			return initialState;
+			let deletedItem = state.filter((product) => product.id !== payload);
+			return [...deletedItem];
 	}
 };
 
@@ -22,8 +23,9 @@ export const cartItem = (item) => {
 	};
 };
 
-export const removeItem = () => {
+export const removeItem = (id) => {
 	return {
 		type: 'CART/REMOVE_ITEM',
+		payload: id,
 	};
 };

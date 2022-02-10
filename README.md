@@ -4,19 +4,12 @@ In our application we want to create an application that can host items to displ
 
 ## Usage
 
-Usage of our application includes being able to add an item from our store into a cart. From there you can view your item as well.
-
-<!-- ## UML
-
-![UML]() -->
-
-## Testing
-
-To be added in a later date.
+Usage of our application includes being able to add an item from our store into a cart. You can see how many items are in your cart, as well as delete items from your cart.
 
 ## Contributors
 
 - Mark Thanadabouth
+- Elizabeth Kavalski
 
 ## Resources
 

@@ -6,7 +6,6 @@ import ProductCard from '../Products/ProductCard';
 import { removeItem } from './Cart';
 
 const displayCart = (props) => {
-	console.log('props in viewCart', props);
 	return (
 		<div className='ShoppingCart'>
 			Cart View is here!!! Its just below! :D
@@ -14,7 +13,7 @@ const displayCart = (props) => {
 				? props.cartItem.Cart.map((category) => (
 						<li className='productCard p-2 bd-highlight' key={category.name}>
 							<ProductCard item={category} />
-							<button onClick={() => props.removeItem()}>Remove</button>
+							<button onClick={() => props.removeItem(category.id)}>Remove</button>
 						</li>
 				  ))
 				: ''}
