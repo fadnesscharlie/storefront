@@ -1,6 +1,6 @@
-import Categories from './Categories/Categories.js';
-import ViewCart from './Cart/ViewCart.js';
-import ProductAPI from './Products/getProducts.js';
+import Categories from './Store/Categories/Categories.js';
+import ViewCart from './Store/Cart/ViewCart.js';
+import ProductAPI from './Store/Products/getProducts.js';
 
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 

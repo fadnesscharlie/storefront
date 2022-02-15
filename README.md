@@ -16,3 +16,4 @@ Usage of our application includes being able to add an item from our store into 
 - [Browser Router](https://reactrouter.com/docs/en/v6/getting-started/overview#navigation)
 - [React BootStrap](https://react-bootstrap.github.io/components/)
 - [Material UI](https://mui.com/)
+- <a href="https://www.flaticon.com/free-icons/image" title="image icons">Image icons created by Lestari - Flaticon</a>

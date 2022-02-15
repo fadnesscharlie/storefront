@@ -1,6 +1,6 @@
 import './Nav.css';
 import { connect } from 'react-redux';
-import { showCategory, resetCategory } from '../Products/Products.js';
+import { showCategory, resetCategory } from '../../StoreFront/Products.js';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { IconButton, Badge } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -36,7 +36,7 @@ const Nav = (props) => (
 		</span>
 
 		<div className='cart'>
-			<IconButton aria-label='cart'>
+			<IconButton aria-label='cart' onClick={() => console.log('CLICKed!!!')}>
 				<StyledBadge badgeContent={props.products.Cart.length ? props.products.Cart.length : '0'} color='secondary'>
 					<ShoppingCartIcon />
 				</StyledBadge>
