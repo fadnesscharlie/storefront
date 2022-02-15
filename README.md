@@ -15,3 +15,4 @@ Usage of our application includes being able to add an item from our store into 
 
 - [Browser Router](https://reactrouter.com/docs/en/v6/getting-started/overview#navigation)
 - [React BootStrap](https://react-bootstrap.github.io/components/)
+- [Material UI](https://mui.com/)
