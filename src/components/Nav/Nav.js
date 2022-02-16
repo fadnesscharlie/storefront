@@ -4,6 +4,7 @@ import { showCategory, resetCategory } from '../../StoreFront/Products.js';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { IconButton, Badge } from '@mui/material';
 import { styled } from '@mui/material/styles';
+// import { BrowserRouter as Link } from 'react-router-dom';
 
 // Taken from https://mui.com/components/badges/
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -36,12 +37,16 @@ const Nav = (props) => (
 		</span>
 
 		<div className='cart'>
+			{/* <Link to="cart"> */}
 			<IconButton aria-label='cart' onClick={() => console.log('CLICKed!!!')}>
 				<StyledBadge badgeContent={props.products.Cart.length ? props.products.Cart.length : '0'} color='secondary'>
 					<ShoppingCartIcon />
 				</StyledBadge>
 			</IconButton>
+			{/* </Link> */}
 		</div>
+
+		<button onClick={() => props.openSideNav()} >Open nav</button>
 	</div>
 );
 

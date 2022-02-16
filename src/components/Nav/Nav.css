@@ -1,9 +1,9 @@
 .navItem {
-  /* border: solid red 2px; */
-  background-color: rgb(184, 224, 240);
-  padding: 10px;
-  margin-right: 10px;
-  margin-bottom: 200px;
+	/* border: solid red 2px; */
+	background-color: rgb(184, 224, 240);
+	padding: 10px;
+	margin-right: 10px;
+	margin-bottom: 200px;
 }
 
 /* .firstNav {
@@ -12,15 +12,54 @@
 } */
 
 .startingNav {
-  font-size: large;
+	font-size: large;
 }
 
 .cart {
-  /* text-align: right; */
-  border: solid rgb(0, 0, 0) 2px;
-  width: 100px;
-  float: right;
-  padding: 5px;
-  position: relative; top: -60px;
+	/* text-align: right; */
+	border: solid rgb(0, 0, 0) 2px;
+	width: 100px;
+	float: right;
+	padding: 5px;
+	position: relative;
+	top: -60px;
+}
 
+/* .NavRoutes {
+  display: flex;
+  margin-bottom: 30px;
+  height: calc(100vh - 60px);
+  width: 100px;
+  border: solid red 2px;
+} */
+
+.NavRoutes {
+	height: 100%;
+	width: 25%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #232323;
+	transition: 0.5s ease;
+	overflow-x: hidden;
+	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.navRoutesLink {
+	margin-left: 0px;
+  padding: 10px;
+	/* margin-right: 5px; */
+  text-decoration: none;
+  
+	/* background-color: aliceblue; */
+}
+
+.navButton {
+  color: aliceblue;
+  margin-top: 30px;
+  position: relative; left: 120px; top: -35px;
 }

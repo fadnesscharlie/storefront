@@ -17,3 +17,5 @@ Usage of our application includes being able to add an item from our store into 
 - [React BootStrap](https://react-bootstrap.github.io/components/)
 - [Material UI](https://mui.com/)
 - <a href="https://www.flaticon.com/free-icons/image" title="image icons">Image icons created by Lestari - Flaticon</a>
+- [Side Nav Height](https://stackoverflow.com/questions/45361928/how-to-make-react-flexbox-stretch-to-full-screen-height)
+- [Side nav controls](https://medium.com/swlh/how-to-make-a-side-navigation-bar-in-reactjs-c90747f3410c)
