@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import '../Products/productCard.css';
 
 // Reducers
-import { showCategory } from '../Products/Products.js';
-import { cartItem, removeItem } from '../Cart/Cart.js';
+import { showCategory } from '../../../StoreFront/Products.js';
+import { cartItem, removeItem } from '../../../StoreFront/Cart.js';
 
 import ProductCard from '../Products/ProductCard';
 import { Button } from 'react-bootstrap';

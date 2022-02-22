@@ -3,9 +3,9 @@ import thunk from 'redux-thunk'
 // This dependency enables the Redux Dev Tools in your Chrome Console.
 import { composeWithDevTools } from "@redux-devtools/extension";
 
-import Products from "../Products/Products.js";
-import Cart from '../Cart/Cart.js'
-import asyncAddProduct from '../Products/Products';
+import Products from "./Products.js";
+import Cart from './Cart.js'
+import asyncAddProduct from './Products';
 
 
 let reducers = combineReducers({ Products, Cart, asyncAddProduct });

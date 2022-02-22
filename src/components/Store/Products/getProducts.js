@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import { asyncAddProduct } from "./Products";
+import { asyncAddProduct } from "../../../StoreFront/Products";
 
 const ProductAPI = () => {
   const dispatch = useDispatch();

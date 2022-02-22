@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './Cart.css';
 import ProductCard from '../Products/ProductCard';
 
-import { removeItem } from './Cart';
+import { removeItem } from '../../../StoreFront/Cart';
 
 const displayCart = (props) => {
 	return (
