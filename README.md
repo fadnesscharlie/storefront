@@ -4,7 +4,7 @@ In our application we want to create an application that can host items to displ
 
 ## Usage
 
-Usage of our application includes being able to add an item from our store into a cart. You can see how many items are in your cart, as well as delete items from your cart.
+Usage of our application includes being able to add multiple items from our store into a cart. You can see how many items are in your cart, as well as delete items from your cart.
 
 ## Contributors
 
